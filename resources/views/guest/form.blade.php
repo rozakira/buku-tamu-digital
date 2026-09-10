@@ -535,7 +535,7 @@
                     Kirim Data Tamu
                 </button>
 
-     <a
+   <a
     href="{{ route('login') }}"
     style="
         display: block;
@@ -554,7 +554,7 @@
         box-sizing: border-box;
     "
 >
-    ← Kembali ke Login Admin
+    Login Admin
 </a>
 
             </form>
