@@ -245,34 +245,52 @@
                     </div>
 
 
-                    <!-- PASSWORD -->
+<!-- PASSWORD -->
+<div class="form-group">
+    <label
+        for="password"
+        class="form-label"
+    >
+        Password
+    </label>
 
-                    <div class="form-group">
+    <div style="position: relative;">
+        <input
+            id="password"
+            type="password"
+            name="password"
+            class="form-input"
+            placeholder="Masukkan password"
+            required
+            autocomplete="current-password"
+            style="padding-right: 50px;"
+        >
 
-                        <label
-                            for="password"
-                            class="form-label"
-                        >
-                            Password
-                        </label>
+        <button
+            type="button"
+            onclick="togglePassword()"
+            style="
+                position: absolute;
+                right: 12px;
+                top: 50%;
+                transform: translateY(-50%);
+                border: none;
+                background: transparent;
+                cursor: pointer;
+                font-size: 18px;
+                padding: 4px;
+            "
+        >
+            👁️
+        </button>
+    </div>
 
-                        <input
-                            id="password"
-                            type="password"
-                            name="password"
-                            class="form-input"
-                            placeholder="Masukkan password"
-                            required
-                            autocomplete="current-password"
-                        >
-
-                        @error('password')
-                            <div class="error">
-                                {{ $message }}
-                            </div>
-                        @enderror
-
-                    </div>
+    @error('password')
+        <div class="error">
+            {{ $message }}
+        </div>
+    @enderror
+</div>
 
 
                     <!-- REMEMBER -->
@@ -316,6 +334,18 @@
         </div>
 
     </main>
+
+    <script>
+    function togglePassword() {
+        const password = document.getElementById('password');
+
+        if (password.type === 'password') {
+            password.type = 'text';
+        } else {
+            password.type = 'password';
+        }
+    }
+</script>
 
 </body>
 </html>
