@@ -535,12 +535,13 @@
                     Kirim Data Tamu
                 </button>
 
-                <button
-    type="button"
-    onclick="history.back()"
+     <a
+    href="{{ route('login') }}"
     style="
+        display: block;
         width: 100%;
         height: 44px;
+        line-height: 44px;
         margin-top: 10px;
         background: white;
         color: #1d4ed8;
@@ -548,11 +549,13 @@
         border-radius: 8px;
         font-size: 14px;
         font-weight: bold;
-        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        box-sizing: border-box;
     "
 >
-    ← Kembali
-</button>
+    ← Kembali ke Login Admin
+</a>
 
             </form>
 
